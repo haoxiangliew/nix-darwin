@@ -47,8 +47,8 @@
             nix-index-database.darwinModules.nix-index
             ./overlays.nix
             ./hosts/macbookPro.nix
-            ./modules/darwin-nix-core.nix
-            ./modules/darwin-system.nix
+            ./modules/nix-core.nix
+            ./modules/system.nix
 
             home-manager.darwinModules.home-manager
             {
@@ -63,7 +63,7 @@
                 ];
                 users.${user} = {
                   home.stateVersion = "23.11";
-                  imports = [ ./home-manager/macbookPro-home.nix ];
+                  imports = [ ./home-manager/home.nix ];
                 };
               };
             }

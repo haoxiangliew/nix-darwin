@@ -172,7 +172,6 @@ in {
     accept-flake-config = true;
     auto-optimise-store = true;
     experimental-features = [ "nix-command" "flakes" ];
-    trusted-users = [ "root" "haoxiangliew" "@admin" ];
     substituters = [
       "https://aseipp-nix-cache.freetls.fastly.net"
       "https://cache.nixos.org"

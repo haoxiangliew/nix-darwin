@@ -14,6 +14,7 @@
       { darwin-config = "$HOME/.nixpkgs/darwin-configuration.nix"; }
       "nixpkgs=/run/current-system/sw/nixpkgs"
     ];
+    settings.trusted-users = [ "root" "haoxiangliew" "@admin" ];
     extraOptions = ''
       extra-platforms = x86_64-darwin aarch64-darwin
     '';
