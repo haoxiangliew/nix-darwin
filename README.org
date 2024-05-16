@@ -1,0 +1,5 @@
+#+TITLE: nix-config
+#+AUTHOR: Hao Xiang Liew
+
+* [[https://github.com/haoxiangliew/nix-config][nix-config]]
+Welcome to my nix configuration
