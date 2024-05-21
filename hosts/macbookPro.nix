@@ -60,6 +60,7 @@
     casks = [
       "anydesk"
       "arduino-ide"
+      "chatgpt"
       "code-composer-studio"
       "crossover"
       "darktable"
