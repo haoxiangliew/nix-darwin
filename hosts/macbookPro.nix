@@ -84,6 +84,7 @@
       "steam"
       "stremio"
       "syncthing"
+      "tradingview"
       "utm"
       "via"
       "visual-studio-code-insiders"
