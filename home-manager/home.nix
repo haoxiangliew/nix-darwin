@@ -97,6 +97,8 @@ in {
       nodePackages.vscode-html-languageserver-bin
       # java
       jdk
+      # js
+      nodePackages.typescript-language-server
       # latex
       pandoc
       texliveFull
@@ -302,8 +304,8 @@ in {
       enableZshIntegration = true;
     };
     neovim = {
-      enable = true;
-      package = pkgs.neovim-nightly;
+      enable = false;
+      package = pkgs.neovim;
       extraLuaConfig = builtins.readFile ../config/nvim/init.lua;
       viAlias = true;
       vimAlias = true;
