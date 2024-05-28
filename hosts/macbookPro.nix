@@ -58,6 +58,7 @@
 
     # `brew install --cask`
     casks = [
+      "altserver"
       "anydesk"
       "arduino-ide"
       "chatgpt"
