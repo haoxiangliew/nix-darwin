@@ -1,4 +1,4 @@
-{ config, pkgs, specialArgs, lib, inputs, ... }: {
+{ inputs, ... }: {
   nixpkgs.overlays = let
     pythonPackages = python-packages:
       with python-packages; [
@@ -22,17 +22,11 @@
         withPcre = true;
       });
     });
-    neovimOverlay = (self: super: {
-      neovim-nightly = (super.neovim-nightly.override {
-        libvterm-neovim =
-          inputs.nixpkgs-staging.legacyPackages.aarch64-darwin.libvterm-neovim;
-      });
-    });
   in [
     inputs.agenix.overlays.default
     inputs.fenix.overlays.default
     inputs.neovim-nightly.overlays.default
-    inputs.nixd.overlays.default
+    # inputs.nixd.overlays.default
     inputs.emacs-lsp-booster.overlays.default
     pythonOverlay
     packagesOverlay

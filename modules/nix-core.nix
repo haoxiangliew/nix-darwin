@@ -1,4 +1,4 @@
-{ pkgs, lib, options, ... }:
+{ pkgs, lib, ... }:
 
 {
   environment.postBuild = ''

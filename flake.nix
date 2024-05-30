@@ -12,7 +12,7 @@
     fenix.url = "github:nix-community/fenix";
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
     emacs-lsp-booster.url = "github:slotThe/emacs-lsp-booster-flake";
-    nixd.url = "github:nix-community/nixd";
+    # nixd.url = "github:nix-community/nixd";
     nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
@@ -24,8 +24,8 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs-darwin, home-manager, agenix
-    , nix-index-database, darwin, ... }:
+  outputs =
+    inputs@{ self, home-manager, agenix, nix-index-database, darwin, ... }:
     let
       user = "haoxiangliew";
 
@@ -36,7 +36,7 @@
           (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
             inherit (final.pkgs-x86) qmk;
             inherit (final.unstable-pkgs)
-              font-awesome material-design-icons nerdfonts nnn platformio;
+              font-awesome material-design-icons nerdfonts nixd nnn platformio;
           }));
       };
     in {

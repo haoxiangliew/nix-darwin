@@ -113,7 +113,7 @@ in {
       nix-diff
       nix-prefetch
       nix-tree
-      # nixd
+      nixd
       nixfmt
       # nodejs
       nodejs
