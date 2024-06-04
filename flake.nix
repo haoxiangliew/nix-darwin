@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    home-manager.url = "github:nix-community/home-manager/release-23.11";
+    home-manager.url = "github:nix-community/home-manager/release-24.05";
     flake-compat = {
       url = "github:inclyc/flake-compat";
       flake = false;
@@ -13,7 +13,7 @@
     neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
     emacs-lsp-booster.url = "github:slotThe/emacs-lsp-booster-flake";
     # nixd.url = "github:nix-community/nixd";
-    nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-23.11-darwin";
+    nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-24.05-darwin";
     nix-index-database = {
       url = "github:Mic92/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs-darwin";
@@ -62,7 +62,7 @@
                   nix-index-database.hmModules.nix-index
                 ];
                 users.${user} = {
-                  home.stateVersion = "23.11";
+                  home.stateVersion = "24.05";
                   imports = [ ./home-manager/home.nix ];
                 };
               };
