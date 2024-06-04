@@ -53,10 +53,10 @@ in {
     };
     packages = with pkgs; [
       aria2
+      fastfetch
       ffmpeg-headless
       htop
       # ncdu
-      neofetch
       nnn
       p7zip
       pinentry_mac
