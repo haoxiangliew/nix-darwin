@@ -1,4 +1,9 @@
-{ config, pkgs, lib, ... }:
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
 
 let
   dracula-pro = {
@@ -44,7 +49,8 @@ let
       };
     };
   };
-in {
+in
+{
   home = {
     activation = {
       removeExistingGitconfig = lib.hm.dag.entryBefore [ "checkLinkTargets" ] ''
@@ -114,7 +120,7 @@ in {
       nix-prefetch
       nix-tree
       nixd
-      nixfmt
+      nixfmt-rfc-style
       # nodejs
       nodejs
       yarn
@@ -161,7 +167,9 @@ in {
         path = "${config.home.homeDirectory}/.gnupg/gpg-haoxiangliew.key";
         mode = "600";
       };
-      gh_token = { file = ../secrets/gh_token.age; };
+      gh_token = {
+        file = ../secrets/gh_token.age;
+      };
     };
     identityPaths = [
       "${config.home.homeDirectory}/Documents/hxSSH/id_ed25519"
@@ -173,7 +181,10 @@ in {
     access-tokens = "!include ${config.age.secrets.gh_token.path}";
     accept-flake-config = true;
     auto-optimise-store = true;
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     substituters = [
       "https://aseipp-nix-cache.freetls.fastly.net"
       "https://cache.nixos.org"
@@ -226,10 +237,12 @@ in {
     gpg = {
       enable = true;
       settings.use-agent = true;
-      publicKeys = [{
-        source = builtins.toPath ../secrets/gpg-haoxiangliew.pub;
-        trust = "ultimate";
-      }];
+      publicKeys = [
+        {
+          source = builtins.toPath ../secrets/gpg-haoxiangliew.pub;
+          trust = "ultimate";
+        }
+      ];
     };
     git = {
       enable = true;
@@ -249,7 +262,11 @@ in {
     };
     gh = {
       enable = true;
-      extensions = with pkgs; [ gh-classroom gh-dash gh-eco ];
+      extensions = with pkgs; [
+        gh-classroom
+        gh-dash
+        gh-eco
+      ];
       settings = {
         git_protocol = "ssh";
         prompt = "enabled";
@@ -268,7 +285,7 @@ in {
         # init brew
         eval (env /opt/homebrew/bin/brew shellenv)
         # HACK: NixOS/nixpkgs:#292043
-        set -agx LIBRARY_PATH ${pkgs.libcxxabi}/lib
+        set -agx LIBRARY_PATH ${pkgs.libcxx}/lib
         # use llvm-clang from homebrew instead of apple-clang
         # if test -d /opt/homebrew/opt/llvm
         #   set -pgx PATH "/opt/homebrew/opt/llvm/bin"
@@ -289,13 +306,12 @@ in {
       '';
       shellAliases = {
         s = "kitty +kitten ssh";
-        checktheme =
-          "${config.home.homeDirectory}/.config/kitty/check-theme.sh";
+        checktheme = "${config.home.homeDirectory}/.config/kitty/check-theme.sh";
       };
     };
     eza = {
       enable = true;
-      enableAliases = true;
+      enableZshIntegration = true;
       git = true;
       icons = true;
     };

@@ -1,4 +1,10 @@
-{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
   system = {
     # activationScripts are executed every time you boot the system or run `nixos-rebuild` / `darwin-rebuild`.
     activationScripts.postUserActivation.text = ''
@@ -36,10 +42,6 @@
       dock = {
         autohide = false;
         show-recents = false;
-        wvous-tl-corner = 2;
-        wvous-tr-corner = 1;
-        wvous-bl-corner = 11;
-        wvous-br-corner = 1;
       };
       finder = {
         _FXShowPosixPathInTitle = true;
@@ -104,11 +106,9 @@
     variables = {
       CLICOLOR = "1";
       EDITOR = "emacs -nw";
-      FZF_DEFAULT_COMMAND =
-        "fd --type file --color=always --strip-cwd-prefix --hidden --exclude .git";
+      FZF_DEFAULT_COMMAND = "fd --type file --color=always --strip-cwd-prefix --hidden --exclude .git";
       FZF_DEFAULT_OPTS = "--ansi";
-      TERMINFO_DIRS =
-        lib.mkForce "${pkgs.kitty.terminfo.outPath}/share/terminfo";
+      TERMINFO_DIRS = lib.mkForce "${pkgs.kitty.terminfo.outPath}/share/terminfo";
     };
     # The world runs on GNU
     systemPackages = with pkgs; [
@@ -140,19 +140,20 @@
     bash.enable = true;
     fish = {
       enable = true;
-      loginShellInit = let
-        # This naive quoting is good enough in this case. There shouldn't be any
-        # double quotes in the input string, and it needs to be double quoted in case
-        # it contains a space (which is unlikely!)
-        dquote = str: ''"'' + str + ''"'';
-        makeBinPathList = map (path: path + "/bin");
-      in ''
-        fish_add_path --move --prepend --path ${
-          lib.concatMapStringsSep " " dquote
-          (makeBinPathList config.environment.profiles)
-        }
-        set fish_user_paths $fish_user_paths
-      '';
+      loginShellInit =
+        let
+          # This naive quoting is good enough in this case. There shouldn't be any
+          # double quotes in the input string, and it needs to be double quoted in case
+          # it contains a space (which is unlikely!)
+          dquote = str: ''"'' + str + ''"'';
+          makeBinPathList = map (path: path + "/bin");
+        in
+        ''
+          fish_add_path --move --prepend --path ${
+            lib.concatMapStringsSep " " dquote (makeBinPathList config.environment.profiles)
+          }
+          set fish_user_paths $fish_user_paths
+        '';
     };
     zsh.enable = true;
   };
@@ -163,7 +164,10 @@
     fontDir.enable = true;
     fonts = with pkgs; [
       (nerdfonts.override {
-        fonts = [ "JetBrainsMono" "NerdFontsSymbolsOnly" ];
+        fonts = [
+          "JetBrainsMono"
+          "NerdFontsSymbolsOnly"
+        ];
       })
       apple-fonts
       font-awesome

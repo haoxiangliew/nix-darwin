@@ -46,7 +46,10 @@
       # }
       {
         name = "emacs-plus@30";
-        args = [ "with-native-comp" "with-elrumo2-icon" ];
+        args = [
+          "with-native-comp"
+          "with-elrumo2-icon"
+        ];
       }
       "libtool"
       "llvm"
