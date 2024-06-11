@@ -79,6 +79,7 @@
       "mac-mouse-fix"
       "microsoft-office"
       "microsoft-teams"
+      "microsoft-teams@classic"
       "middleclick"
       "minecraft"
       "obs"
