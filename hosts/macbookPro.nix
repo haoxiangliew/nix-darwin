@@ -11,8 +11,6 @@
     };
 
     taps = [
-      "homebrew/cask-fonts"
-      "homebrew/cask-versions"
       "homebrew/services"
       "railwaycat/emacsmacport"
       "d12frosted/emacs-plus"
