@@ -169,6 +169,8 @@ in
       };
       gh_token = {
         file = ../secrets/gh_token.age;
+        path = "${config.home.homeDirectory}/.gh_token";
+        mode = "400";
       };
     };
     identityPaths = [
@@ -177,23 +179,27 @@ in
     ];
   };
 
-  nix.settings = {
-    access-tokens = "!include ${config.age.secrets.gh_token.path}";
-    accept-flake-config = true;
-    auto-optimise-store = true;
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    substituters = [
-      "https://aseipp-nix-cache.freetls.fastly.net"
-      "https://cache.nixos.org"
-    ];
-    trusted-substituters = [ "https://nix-community.cachix.org" ];
-    extra-substituters = [ "https://nix-community.cachix.org" ];
-    extra-trusted-public-keys = [
-      "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-    ];
+  nix = {
+    settings = {
+      accept-flake-config = true;
+      auto-optimise-store = true;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      substituters = [
+        "https://aseipp-nix-cache.freetls.fastly.net"
+        "https://cache.nixos.org"
+      ];
+      extra-trusted-substituters = [ "https://nix-community.cachix.org" ];
+      extra-substituters = [ "https://nix-community.cachix.org" ];
+      extra-trusted-public-keys = [
+        "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
+      ];
+    };
+    extraOptions = ''
+      !include ${config.age.secrets.gh_token.path}
+    '';
   };
 
   programs = {
