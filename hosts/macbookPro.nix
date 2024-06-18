@@ -15,15 +15,10 @@
       "railwaycat/emacsmacport"
       "d12frosted/emacs-plus"
       "chipsalliance/verible"
-      "nextfire/tap"
     ];
 
     # `brew install`
     brews = [
-      {
-        name = "apple-music-discord-rpc";
-        restart_service = true;
-      }
       "aspell"
       "croc"
       "fileicon"
