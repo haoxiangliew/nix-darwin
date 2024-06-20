@@ -326,8 +326,7 @@ in
       enableZshIntegration = true;
     };
     neovim = {
-      enable = false;
-      package = pkgs.neovim;
+      enable = true;
       extraLuaConfig = builtins.readFile ../config/nvim/init.lua;
       viAlias = true;
       vimAlias = true;

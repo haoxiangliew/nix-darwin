@@ -24,7 +24,8 @@ update:
 	nix flake update
 
 format:
-	nixfmt -v **/*.nix
+	nixfmt -vc *.nix
+	nixfmt -vc */*.nix
 
 rm:
 	sudo rm /etc/bashrc /etc/zshrc
