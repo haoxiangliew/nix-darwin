@@ -10,7 +10,7 @@
     };
     agenix.url = "github:ryantm/agenix";
     fenix.url = "github:nix-community/fenix";
-    # neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
+    neovim-nightly.url = "github:nix-community/neovim-nightly-overlay";
     emacs-lsp-booster.url = "github:slotThe/emacs-lsp-booster-flake";
     nixpkgs-darwin.url = "github:NixOS/nixpkgs/nixpkgs-24.05-darwin";
     nix-index-database = {

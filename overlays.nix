@@ -30,7 +30,7 @@
     [
       inputs.agenix.overlays.default
       inputs.fenix.overlays.default
-      # inputs.neovim-nightly.overlays.default
+      inputs.neovim-nightly.overlays.default
       inputs.emacs-lsp-booster.overlays.default
       pythonOverlay
       packagesOverlay
