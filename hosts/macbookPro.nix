@@ -67,7 +67,6 @@
       "kekaexternalhelper"
       "keyboardcleantool"
       "kitty"
-      "league-of-legends"
       "mac-mouse-fix"
       "microsoft-office"
       "microsoft-teams"
