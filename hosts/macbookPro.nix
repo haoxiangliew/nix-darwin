@@ -61,7 +61,6 @@
       "darktable"
       "discord"
       "epic-games"
-      "google-chrome"
       "iina"
       "keepingyouawake"
       "keka"
