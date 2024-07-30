@@ -105,6 +105,8 @@ in
       jdk
       # js
       nodePackages.typescript-language-server
+      nodePackages.eslint
+      typescript
       # latex
       pandoc
       texliveFull
@@ -123,7 +125,6 @@ in
       nixfmt-rfc-style
       # nodejs
       nodejs
-      typescript
       yarn
       # pascal
       # fpc
