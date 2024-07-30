@@ -123,6 +123,7 @@ in
       nixfmt-rfc-style
       # nodejs
       nodejs
+      typescript
       yarn
       # pascal
       # fpc
