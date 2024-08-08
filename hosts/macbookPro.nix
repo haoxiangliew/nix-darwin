@@ -62,6 +62,7 @@
       "darktable"
       "discord"
       "epic-games"
+      "firefox@nightly"
       "iina"
       "keepingyouawake"
       "keka"
