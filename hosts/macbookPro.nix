@@ -87,6 +87,7 @@
       "utm"
       "via"
       "visual-studio-code-insiders"
+      "wezterm"
       "whisky"
       "xquartz"
       "zed-preview"
