@@ -53,45 +53,59 @@
     ];
 
     # `brew install --cask`
-    casks = [
-      "anydesk"
-      "arduino-ide"
-      "chatgpt"
-      "code-composer-studio"
-      "cursor"
-      "darktable"
-      "discord"
-      "epic-games"
-      "firefox@nightly"
-      "iina"
-      "keepingyouawake"
-      "keka"
-      "kekaexternalhelper"
-      "keyboardcleantool"
-      "kitty"
-      "league-of-legends"
-      "mac-mouse-fix"
-      "microsoft-office"
-      "microsoft-teams"
-      "microsoft-teams@classic"
-      "middleclick"
-      "minecraft"
-      "obs"
-      "openemu"
-      "signal"
-      "spotify"
-      "steam"
-      "stremio"
-      "syncthing"
-      "tradingview"
-      "utm"
-      "via"
-      "visual-studio-code-insiders"
-      "wezterm"
-      "whisky"
-      "xquartz"
-      "zed-preview"
-      "zoom"
-    ];
+    casks =
+      let
+        packages = [
+          "anydesk"
+          "arduino-ide"
+          "chatgpt"
+          "code-composer-studio"
+          "cursor"
+          "darktable"
+          "discord"
+          "epic-games"
+          "firefox@nightly"
+          "iina"
+          "keepingyouawake"
+          "keka"
+          "kekaexternalhelper"
+          "keyboardcleantool"
+          "kitty"
+          "league-of-legends"
+          "mac-mouse-fix"
+          "microsoft-office"
+          "microsoft-teams"
+          "microsoft-teams@classic"
+          "middleclick"
+          "minecraft"
+          "obs"
+          "openemu"
+          "signal"
+          "spotify"
+          "steam"
+          "stremio"
+          "syncthing"
+          "tradingview"
+          "utm"
+          "via"
+          "visual-studio-code-insiders"
+          "wezterm"
+          "whisky"
+          "xquartz"
+          "zed-preview"
+          "zoom"
+        ];
+      in
+      (map (
+        pkg:
+        if builtins.isString pkg then
+          {
+            name = pkg;
+            greedy = true;
+          }
+        else
+          pkg
+      ) packages)
+      ++ [ ];
   };
 }

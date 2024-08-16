@@ -1,6 +1,6 @@
 UNAME_S := $(shell uname -s)
 
-.PHONY: setup setuplsp update format rm deploy deploy-debug gc clean-build clean resetui resetgpg addemacs brewup all
+.PHONY: default setup setuplsp setupsh update format rm deploy deploy-debug optimize gc clean-build clean reset resetui resetgpg addemacs all
 
 ifeq ($(UNAME_S),Darwin)
 
@@ -33,13 +33,15 @@ rm:
 deploy:
 	nix build .#darwinConfigurations.macbookPro.system \
 	  --extra-experimental-features 'nix-command flakes'
-	nix store optimise
 	./result/sw/bin/darwin-rebuild switch --flake .#macbookPro
 
 deploy-debug:
 	nix build .#darwinConfigurations.macbookPro.system \
 	  --extra-experimental-features 'nix-command flakes' --show-trace
 	./result/sw/bin/darwin-rebuild switch --flake --show-trace .#macbookPro
+
+optimize:
+	nix store optimise
 
 gc:
 	nix-collect-garbage -d
@@ -67,10 +69,7 @@ resetgpg:
 addemacs:
 	osascript -e 'tell application "Finder" to make alias file to posix file "/opt/homebrew/opt/emacs-plus@30/Emacs.app" at POSIX file "/Applications"'
 
-brewup:
-	./brewup.sh
-
-all: setuplsp format deploy brewup
+all: setuplsp format deploy
 
 else
 
