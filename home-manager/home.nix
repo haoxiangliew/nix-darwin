@@ -184,7 +184,7 @@ in
   nix = {
     settings = {
       accept-flake-config = true;
-      auto-optimise-store = true;
+      auto-optimise-store = false; # WARN: NixOS/Nix/7273
       experimental-features = [
         "nix-command"
         "flakes"
