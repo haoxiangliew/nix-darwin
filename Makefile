@@ -33,7 +33,7 @@ rm:
 deploy:
 	nix build .#darwinConfigurations.macbookPro.system \
 	  --extra-experimental-features 'nix-command flakes'
-	nix-store --optimise
+	nix store optimise
 	./result/sw/bin/darwin-rebuild switch --flake .#macbookPro
 
 deploy-debug:
