@@ -19,7 +19,7 @@
       "haoxiangliew"
       "@admin"
     ];
-    extraOptions = ''
+    extraSetup = ''
       extra-platforms = x86_64-darwin aarch64-darwin
     '';
   };
