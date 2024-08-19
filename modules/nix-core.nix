@@ -1,7 +1,7 @@
 { pkgs, lib, ... }:
 
 {
-  environment.postBuild = ''
+  environment.extraSetup = ''
     ln -sv ${pkgs.path} $out/nixpkgs
   '';
 
@@ -19,7 +19,7 @@
       "haoxiangliew"
       "@admin"
     ];
-    extraSetup = ''
+    extraOptions = ''
       extra-platforms = x86_64-darwin aarch64-darwin
     '';
   };
