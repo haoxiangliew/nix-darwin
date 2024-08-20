@@ -104,6 +104,7 @@ in
       # java
       jdk
       # js
+      nodePackages.svelte-language-server
       nodePackages.typescript-language-server
       nodePackages.eslint
       typescript
