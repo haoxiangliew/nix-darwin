@@ -60,7 +60,6 @@
           "arduino-ide"
           "chatgpt"
           "code-composer-studio"
-          "cursor"
           "darktable"
           "discord"
           "epic-games"
