@@ -80,7 +80,7 @@
           "obs"
           "openemu"
           "signal"
-	  "slack@beta"
+          "slack@beta"
           "spotify"
           "steam"
           "stremio"
