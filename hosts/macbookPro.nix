@@ -11,10 +11,11 @@
     };
 
     taps = [
+      "chipsalliance/verible"
+      "d12frosted/emacs-plus"
       "homebrew/services"
       "railwaycat/emacsmacport"
-      "d12frosted/emacs-plus"
-      "chipsalliance/verible"
+      "supabase/tap"
     ];
 
     # `brew install`
@@ -84,6 +85,7 @@
           "spotify"
           "steam"
           "stremio"
+          "supabase"
           "syncthing"
           "tradingview"
           "utm"
