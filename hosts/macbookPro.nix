@@ -15,7 +15,6 @@
       "d12frosted/emacs-plus"
       "homebrew/services"
       "railwaycat/emacsmacport"
-      "supabase/tap"
     ];
 
     # `brew install`
@@ -49,6 +48,7 @@
       "llvm"
       "libomp"
       "pngpaste"
+      "supabase/tap/supabase"
       "verible"
       "verilator"
     ];
@@ -85,7 +85,6 @@
           "spotify"
           "steam"
           "stremio"
-          "supabase"
           "syncthing"
           "tradingview"
           "utm"
