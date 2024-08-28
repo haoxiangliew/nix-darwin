@@ -47,7 +47,6 @@
       "libtool"
       "llvm"
       "libomp"
-      "pgroonga"
       "pngpaste"
       "supabase/tap/supabase"
       "verible"
