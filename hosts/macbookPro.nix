@@ -79,6 +79,7 @@
           "microsoft-teams@classic"
           "middleclick"
           "minecraft"
+          "mullvadvpn"
           "obs"
           "openemu"
           "orbstack"
