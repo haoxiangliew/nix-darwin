@@ -80,6 +80,7 @@
                 ];
                 users.${user} = {
                   home.stateVersion = "24.05";
+		  system.stateVersion = "24.05";
                   imports = [ ./home-manager/home.nix ];
                 };
               };
