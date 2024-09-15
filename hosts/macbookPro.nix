@@ -38,7 +38,7 @@
       #   ];
       # }
       {
-        name = "emacs-plus@30";
+        name = "emacs-plus@31";
         args = [
           "with-native-comp"
           "with-elrumo2-icon"

@@ -61,6 +61,10 @@
         macbookPro = darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           modules = [
+            {
+              system.stateVersion = 5;
+              ids.gids.nixbld = 30000;
+            }
             nix-index-database.darwinModules.nix-index
             ./overlays.nix
             ./hosts/macbookPro.nix
@@ -80,7 +84,6 @@
                 ];
                 users.${user} = {
                   home.stateVersion = "24.05";
-		  system.stateVersion = "24.05";
                   imports = [ ./home-manager/home.nix ];
                 };
               };
