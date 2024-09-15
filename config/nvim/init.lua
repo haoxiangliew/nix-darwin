@@ -31,7 +31,6 @@ require("lazy").setup({
     "nvim-lualine/lualine.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  "numToStr/Comment.nvim",
 }, {})
 
 -- set colorscheme from terminal
@@ -69,6 +68,3 @@ vim.o.timeoutlen = 300
 
 -- completeopt
 vim.o.completeopt = "menuone,noselect"
-
--- use gc to toggle comments
-require("Comment").setup()
