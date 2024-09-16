@@ -48,6 +48,7 @@
                 font-awesome
                 material-design-icons
                 nerdfonts
+                neovim-unwrapped
                 nixd
                 nnn
                 platformio

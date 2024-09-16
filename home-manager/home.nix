@@ -330,7 +330,6 @@ in
     };
     neovim = {
       enable = true;
-      # package = pkgs.neovim;
       extraLuaConfig = builtins.readFile ../config/nvim/init.lua;
       viAlias = true;
       vimAlias = true;
