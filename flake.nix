@@ -45,6 +45,7 @@
             (optionalAttrs (prev.stdenv.system == "aarch64-darwin") {
               inherit (final.pkgs-x86) qmk;
               inherit (final.unstable-pkgs)
+                aider-chat
                 font-awesome
                 material-design-icons
                 nerdfonts
