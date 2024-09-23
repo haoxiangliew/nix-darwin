@@ -46,6 +46,7 @@
               inherit (final.pkgs-x86) qmk;
               inherit (final.unstable-pkgs)
                 aider-chat
+                deno
                 font-awesome
                 material-design-icons
                 nerdfonts
