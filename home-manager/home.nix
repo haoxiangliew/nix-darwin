@@ -105,6 +105,7 @@ in
       # java
       jdk
       # js
+      deno
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
       nodePackages.eslint
