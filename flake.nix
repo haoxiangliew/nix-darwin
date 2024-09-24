@@ -50,7 +50,6 @@
                 font-awesome
                 material-design-icons
                 nerdfonts
-                neovim-unwrapped
                 nixd
                 nnn
                 platformio
@@ -80,7 +79,9 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                extraSpecialArgs = inputs;
+                extraSpecialArgs = {
+                  inherit inputs;
+                };
                 sharedModules = [
                   agenix.homeManagerModules.default
                   nix-index-database.hmModules.nix-index

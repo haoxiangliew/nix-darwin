@@ -1,5 +1,6 @@
 {
   config,
+  inputs,
   pkgs,
   lib,
   ...
@@ -332,6 +333,7 @@ in
     };
     neovim = {
       enable = true;
+      package = inputs.neovim-nightly.packages.${pkgs.system}.default;
       extraLuaConfig = builtins.readFile ../config/nvim/init.lua;
       viAlias = true;
       vimAlias = true;

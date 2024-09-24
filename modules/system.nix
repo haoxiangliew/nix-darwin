@@ -105,7 +105,7 @@
   environment = {
     variables = {
       CLICOLOR = "1";
-      EDITOR = "emacs -nw";
+      EDITOR = "vim";
       FZF_DEFAULT_COMMAND = "fd --type file --color=always --strip-cwd-prefix --hidden --exclude .git";
       FZF_DEFAULT_OPTS = "--ansi";
       TERMINFO_DIRS = lib.mkForce "${pkgs.kitty.terminfo.outPath}/share/terminfo";
