@@ -106,6 +106,7 @@ in
       # java
       jdk
       # js
+      bun
       deno
       nodePackages.svelte-language-server
       nodePackages.typescript-language-server
