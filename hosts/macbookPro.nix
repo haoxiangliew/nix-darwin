@@ -79,6 +79,7 @@
           "microsoft-teams@classic"
           "middleclick"
           "minecraft"
+          "mongodb-compass"
           "mullvadvpn"
           "obs"
           "openemu"
