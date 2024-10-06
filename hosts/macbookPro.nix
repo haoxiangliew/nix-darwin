@@ -15,6 +15,7 @@
       "d12frosted/emacs-plus"
       "homebrew/services"
       "railwaycat/emacsmacport"
+      "mongodb/brew"
     ];
 
     # `brew install`
@@ -47,6 +48,7 @@
       "libtool"
       "llvm"
       "libomp"
+      "mongodb-community"
       "pngpaste"
       "supabase/tap/supabase"
       "verible"
