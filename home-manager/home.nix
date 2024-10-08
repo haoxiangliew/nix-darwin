@@ -308,11 +308,13 @@ in
         #   set -pgx CPPFLAGS "-I/opt/homebrew/opt/llvm/include"
         # end
         # set cursor to line
-        set fish_cursor_default line
+        # set fish_cursor_default line
+        # enable vi mode
         function fish_user_key_bindings
           fish_default_key_bindings -M insert
           fish_vi_key_bindings --no-erase insert
         end
+        # enable command-not-found handler
         function __fish_command_not_found_handler --on-event fish_command_not_found
           ${config.home.homeDirectory}/.config/fish/nix-command-not-found $argv
         end
