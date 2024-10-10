@@ -84,6 +84,7 @@ in
       fzf
       jq
       ripgrep
+      sqlfluff
       tio
       # c / c++
       clang
