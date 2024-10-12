@@ -22,6 +22,7 @@
     brews = [
       "aspell"
       "croc"
+      "deskpad"
       "fileicon"
       "gstreamer"
       # {
