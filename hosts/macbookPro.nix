@@ -22,7 +22,6 @@
     brews = [
       "aspell"
       "croc"
-      "deskpad"
       "fileicon"
       "gstreamer"
       # {
@@ -65,6 +64,7 @@
           "chatgpt"
           "code-composer-studio"
           "darktable"
+          "deskpad"
           "discord"
           "epic-games"
           "firefox@nightly"
