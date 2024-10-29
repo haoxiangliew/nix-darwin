@@ -61,6 +61,7 @@
         packages = [
           "anydesk"
           "arduino-ide"
+          "brave"
           "chatgpt"
           "code-composer-studio"
           "darktable"
