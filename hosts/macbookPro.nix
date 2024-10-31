@@ -16,6 +16,7 @@
       "homebrew/services"
       "railwaycat/emacsmacport"
       "mongodb/brew"
+      "supabase/tap"
     ];
 
     # `brew install`
@@ -50,7 +51,7 @@
       "libomp"
       "mongodb-community"
       "pngpaste"
-      "supabase/tap/supabase"
+      "supabase"
       "verible"
       "verilator"
     ];

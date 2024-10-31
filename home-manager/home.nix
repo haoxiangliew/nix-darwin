@@ -83,6 +83,7 @@ in
       fd
       fzf
       jq
+      postgresql_15
       ripgrep
       sqlfluff
       tio
