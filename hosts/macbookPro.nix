@@ -60,16 +60,14 @@
     casks =
       let
         packages = [
-          "anydesk"
           "arduino-ide"
+          "betterdisplay"
           "brave-browser"
           "chatgpt"
           "code-composer-studio"
           "darktable"
-          "deskpad"
           "discord"
           "epic-games"
-          "firefox@nightly"
           "iina"
           "insomnia"
           "keepingyouawake"
