@@ -1,0 +1,28 @@
+# Steps for MOSS
+
+## Pre-requisites
+- Register for MOSS [https://theory.stanford.edu/~aiken/moss/](https://theory.stanford.edu/~aiken/moss/)
+  - Make sure you follow the instructions exactly
+- Install the GitHub Classroom CLI [https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/using-github-classroom-with-github-cli#setting-up-github-cli-](https://docs.github.com/en/education/manage-coursework-with-github-classroom/teach-with-github-classroom/using-github-classroom-with-github-cli#setting-up-github-cli-)
+
+## Steps
+
+1. Get into a Linux environment, ideally, Ubuntu.
+  - Windows Subsystem for Linux (WSL) is a good option: [https://ubuntu.com/desktop/wsl](https://ubuntu.com/desktop/wsl)
+
+2. Install perl
+  - `sudo apt-get install perl`
+
+3. Use the MOSS script provided in the email, save it as `moss.pl`
+  - Alternatively, `wget http://moss.stanford.edu/general/scripts/mossnet -O moss.pl`
+
+4. Clone student repositories with GitHub Classroom CLI
+  - `gh classroom clone <assignment-url>`
+
+5. Run MOSS Script
+  ```
+  perl moss.pl -l c -b <path_to_base_projX_main.c> -b <path_to_base_system_msp432p401r.c> -d <cloned_student_repo_path>/*/*.c <cloned_student_repo_path>/*/*.h
+  ```
+  - Should output a URL to the MOSS results
+
+6. (Optional) Use mossum to visualize the results [https://github.com/hjalti/mossum](https://github.com/hjalti/mossum)
