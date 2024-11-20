@@ -28,7 +28,7 @@ format:
 	nixfmt -v */*.nix
 
 rm:
-	sudo rm /etc/bashrc /etc/zshrc
+	sudo rm -f /etc/bashrc /etc/zshrc
 
 deploy:
 	nix build .#darwinConfigurations.macbookPro.system \
