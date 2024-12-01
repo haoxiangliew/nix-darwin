@@ -96,23 +96,21 @@ in
       ninja
       platformio
       # bash
-      nodePackages.bash-language-server
+      bash-language-server
       shfmt
-      # css
-      nodePackages.vscode-css-languageserver-bin
+      # html/css/json/eslint
+      vscode-langservers-extracted
+      eslint
       # go
       go
       gopls
-      # html
-      nodePackages.vscode-html-languageserver-bin
       # java
       jdk
       # js
       bun
       deno
-      nodePackages.svelte-language-server
-      nodePackages.typescript-language-server
-      nodePackages.eslint
+      svelte-language-server
+      typescript-language-server
       typescript
       # latex
       pandoc
@@ -138,7 +136,7 @@ in
       # python
       black
       pythonWithMyPackages
-      nodePackages.pyright
+      pyright
       # rust
       (fenix.complete.withComponents [
         "cargo"
@@ -149,7 +147,7 @@ in
       ])
       rust-analyzer-nightly
       # yaml
-      nodePackages.yaml-language-server
+      yaml-language-server
     ];
     file = {
       ".hushlogin".text = "";
@@ -329,12 +327,14 @@ in
     eza = {
       enable = true;
       enableZshIntegration = true;
+      enableFishIntegration = true;
       git = true;
-      icons = true;
+      icons = "auto";
     };
     starship = {
       enable = true;
       enableZshIntegration = true;
+      enableFishIntegration = true;
     };
     neovim = {
       enable = true;
