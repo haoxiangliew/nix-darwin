@@ -115,6 +115,7 @@ in
       # latex
       pandoc
       texliveFull
+      typst
       # lua
       luaPackages.lua-lsp
       stylua
