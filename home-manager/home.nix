@@ -82,6 +82,7 @@ in
       emacs-lsp-booster
       fd
       fzf
+      git-trim
       jq
       postgresql_15
       ripgrep
