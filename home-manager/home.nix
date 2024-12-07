@@ -84,6 +84,7 @@ in
       fzf
       git-trim
       jq
+      lazygit
       postgresql_15
       ripgrep
       sqlfluff
@@ -125,6 +126,7 @@ in
       # nix
       direnv
       hydra-check
+      nil
       nix-diff
       nix-prefetch
       nix-tree
