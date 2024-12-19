@@ -84,7 +84,6 @@ in
       fzf
       git-trim
       jq
-      lazygit
       postgresql_15
       ripgrep
       sqlfluff
@@ -287,6 +286,15 @@ in
       settings = {
         git_protocol = "ssh";
         prompt = "enabled";
+      };
+    };
+    lazygit = {
+      enable = true;
+      settings = {
+        gui = {
+          showRandomTip = false;
+          nerdFontsVersion = "3";
+        };
       };
     };
     fish = {
