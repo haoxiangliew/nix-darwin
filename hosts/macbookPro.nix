@@ -93,6 +93,7 @@
           "spotify"
           "steam"
           "stremio"
+          "sublime-merge"
           "syncthing"
           "tradingview"
           "utm"
