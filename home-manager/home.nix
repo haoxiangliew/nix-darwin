@@ -309,6 +309,8 @@ in
         end
         # init brew
         eval (env /opt/homebrew/bin/brew shellenv)
+        # enable shell integration for ghostty
+        source $GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
         # HACK: NixOS/nixpkgs:#292043
         set -agx LIBRARY_PATH ${pkgs.libcxx}/lib
         # use llvm-clang from homebrew instead of apple-clang
@@ -322,15 +324,15 @@ in
         # set cursor to line
         # set fish_cursor_default line
         # enable vi mode
-        function fish_user_key_bindings
-          fish_default_key_bindings -M insert
-          fish_vi_key_bindings --no-erase insert
-        end
-        set fish_cursor_default block
-        set fish_cursor_insert line
-        set fish_cursor_replace_one underscore
-        set fish_cursor_replace underscore
-        set fish_cursor_external line
+        # function fish_user_key_bindings
+        #   fish_default_key_bindings -M insert
+        #   fish_vi_key_bindings --no-erase insert
+        # end
+        # set fish_cursor_default block
+        # set fish_cursor_insert line
+        # set fish_cursor_replace_one underscore
+        # set fish_cursor_replace underscore
+        # set fish_cursor_external line
         # enable command-not-found handler
         function __fish_command_not_found_handler --on-event fish_command_not_found
           ${config.home.homeDirectory}/.config/fish/nix-command-not-found $argv
@@ -392,6 +394,11 @@ in
       theme = dark:dracula-pro,light:"Builtin Solarized Light"
 
       mouse-hide-while-typing = true
+
+      shell-integration-features = no-cursor
+      cursor-style = bar
+      cursor-style-blink = false
+      adjust-cursor-thickness = 2
 
       macos-titlebar-style = tabs
     '';
