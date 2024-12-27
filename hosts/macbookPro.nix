@@ -68,6 +68,7 @@
           "darktable"
           "discord"
           "epic-games"
+          "ghostty"
           "iina"
           "insomnia"
           "keepingyouawake"
