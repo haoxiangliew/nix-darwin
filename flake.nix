@@ -47,7 +47,7 @@
               inherit (final.unstable-pkgs)
                 aider-chat
                 bun
-                deno
+                # deno
                 font-awesome
                 material-design-icons
                 nerd-fonts

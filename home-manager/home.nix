@@ -326,6 +326,11 @@ in
           fish_default_key_bindings -M insert
           fish_vi_key_bindings --no-erase insert
         end
+        set fish_cursor_default block
+        set fish_cursor_insert line
+        set fish_cursor_replace_one underscore
+        set fish_cursor_replace underscore
+        set fish_cursor_external line
         # enable command-not-found handler
         function __fish_command_not_found_handler --on-event fish_command_not_found
           ${config.home.homeDirectory}/.config/fish/nix-command-not-found $argv
@@ -375,6 +380,44 @@ in
       '';
       executable = true;
     };
+    "ghostty/config".text = ''
+      font-family = "JetBrainsMono Nerd Font"
+      font-size = 11.5
+      font-thicken = true
+
+      window-padding-x = 10
+      window-padding-y = 10
+      window-padding-balance = true
+
+      theme = dark:dracula-pro,light:"Builtin Solarized Light"
+
+      mouse-hide-while-typing = true
+
+      macos-titlebar-style = tabs
+    '';
+    "ghostty/themes/dracula-pro".text = ''
+      palette = 0=${dracula-pro.ansi.black_0}
+      palette = 1=${dracula-pro.ansi.red_1}
+      palette = 2=${dracula-pro.ansi.green_2}
+      palette = 3=${dracula-pro.ansi.yellow_3}
+      palette = 4=${dracula-pro.ansi.blue_4}
+      palette = 5=${dracula-pro.ansi.purple_5}
+      palette = 6=${dracula-pro.ansi.cyan_6}
+      palette = 7=${dracula-pro.ansi.white_7}
+      palette = 8=${dracula-pro.ansi.bright.black_8}
+      palette = 9=${dracula-pro.ansi.bright.red_9}
+      palette = 10=${dracula-pro.ansi.bright.green_10}
+      palette = 11=${dracula-pro.ansi.bright.yellow_11}
+      palette = 12=${dracula-pro.ansi.bright.blue_12}
+      palette = 13=${dracula-pro.ansi.bright.purple_13}
+      palette = 14=${dracula-pro.ansi.bright.cyan_14}
+      palette = 15=${dracula-pro.ansi.bright.white_15}
+      background = ${dracula-pro.background}
+      foreground = ${dracula-pro.foreground}
+      cursor-color = ${dracula-pro.foreground}
+      selection-background = ${dracula-pro.selection}
+      selection-foreground = ${dracula-pro.foreground}
+    '';
     "kitty/kitty.conf".source = ../config/kitty/kitty.conf;
     "kitty/current-theme.conf".text = ''
       # Dracula Pro
