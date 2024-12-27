@@ -68,12 +68,12 @@ in
       p7zip
       pinentry_mac
       qmk
-      ranger
       speedtest-cli
       testdisk
       tree
       unzip
       xz
+      yazi
       yt-dlp
       zip
       # devtools
