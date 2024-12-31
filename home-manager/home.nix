@@ -310,7 +310,9 @@ in
         # init brew
         eval (env /opt/homebrew/bin/brew shellenv)
         # enable shell integration for ghostty
-        source $GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish
+        if set -q GHOSTTY_RESOURCES_DIR
+          source "$GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish"
+        end
         # HACK: NixOS/nixpkgs:#292043
         set -agx LIBRARY_PATH ${pkgs.libcxx}/lib
         # use llvm-clang from homebrew instead of apple-clang
