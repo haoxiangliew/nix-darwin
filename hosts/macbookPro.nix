@@ -86,6 +86,7 @@
           "mongodb-compass"
           "mullvadvpn"
           "obs"
+          "ollama"
           "openemu"
           "orbstack"
           "postico"
