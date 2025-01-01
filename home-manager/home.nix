@@ -343,6 +343,7 @@ in
       shellAliases = {
         s = "kitty +kitten ssh";
         checktheme = "${config.home.homeDirectory}/.config/kitty/check-theme.sh";
+        ollamaupdate = "ollama list | tail -n +2 | awk '{print $1}' | xargs -I {} ollama pull {}";
       };
     };
     eza = {
