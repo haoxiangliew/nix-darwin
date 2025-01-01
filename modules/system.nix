@@ -57,6 +57,7 @@
       };
       NSGlobalDomain = {
         "com.apple.swipescrolldirection" = true;
+	AppleFontSmoothing = 0;
         AppleInterfaceStyle = "Dark";
         AppleKeyboardUIMode = 3;
         ApplePressAndHoldEnabled = true;
