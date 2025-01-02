@@ -313,16 +313,6 @@ in
         if set -q GHOSTTY_RESOURCES_DIR
           source "$GHOSTTY_RESOURCES_DIR/shell-integration/fish/vendor_conf.d/ghostty-shell-integration.fish"
         end
-        # HACK: NixOS/nixpkgs:#292043
-        set -agx LIBRARY_PATH ${pkgs.libcxx}/lib
-        # use llvm-clang from homebrew instead of apple-clang
-        # if test -d /opt/homebrew/opt/llvm
-        #   set -pgx PATH "/opt/homebrew/opt/llvm/bin"
-        #   set -agx CC "/opt/homebrew/opt/llvm/bin/clang"
-        #   set -agx CCX "/opt/homebrew/opt/llvm/bin/clang++"
-        #   set -pgx LDFLAGS "-L/opt/homebrew/opt/llvm/lib -L/opt/homebrew/opt/llvm/lib/c++ -Wl,-rpath,/opt/homebrew/opt/llvm/lib/c++"
-        #   set -pgx CPPFLAGS "-I/opt/homebrew/opt/llvm/include"
-        # end
         # set cursor to line
         # set fish_cursor_default line
         # enable vi mode
@@ -387,7 +377,7 @@ in
     };
     "ghostty/config".text = ''
       font-family = "JetBrainsMono Nerd Font"
-      font-size = 11.5
+      font-size = 12
       font-thicken = true
 
       window-padding-x = 10
@@ -398,7 +388,7 @@ in
 
       mouse-hide-while-typing = true
 
-      shell-integration-features = no-cursor
+      shell-integration-features = no-cursor,sudo
       cursor-style = bar
       cursor-style-blink = false
       adjust-cursor-thickness = 2
