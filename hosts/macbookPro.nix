@@ -14,8 +14,9 @@
       "chipsalliance/verible"
       "d12frosted/emacs-plus"
       "homebrew/services"
-      "railwaycat/emacsmacport"
       "mongodb/brew"
+      "nikitabobko/tap"
+      "railwaycat/emacsmacport"
       "supabase/tap"
     ];
 
@@ -60,6 +61,7 @@
     casks =
       let
         packages = [
+          "aerospace"
           "arduino-ide"
           "betterdisplay"
           "brave-browser"

@@ -385,6 +385,7 @@ in
       window-padding-balance = true
 
       theme = dark:dracula-pro,light:"Builtin Solarized Light"
+      window-colorspace = display-p3
 
       mouse-hide-while-typing = true
 
@@ -394,6 +395,8 @@ in
       adjust-cursor-thickness = 2
 
       macos-titlebar-style = tabs
+
+      keybind = global:cmd+ctrl+`=toggle_quick_terminal
     '';
     "ghostty/themes/dracula-pro".text = ''
       palette = 0=${dracula-pro.ansi.black_0}
