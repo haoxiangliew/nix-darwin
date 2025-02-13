@@ -77,7 +77,7 @@ in
       yt-dlp
       zip
       # devtools
-      aider-chat
+      # aider-chat
       agenix
       emacs-lsp-booster
       fd

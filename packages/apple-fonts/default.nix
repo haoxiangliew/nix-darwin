@@ -8,7 +8,7 @@ stdenv.mkDerivation {
     owner = "haoxiangliew";
     repo = "apple-fonts";
     rev = "master";
-    sha256 = "15qqycdkv6jy3g37y9pp02af38rm6jlmfkz2fbjgx4ssw421a87g";
+    sha256 = "1j6d4gs81z0qfn396bv5x4jl0rkawrcx5ydxwhsxrxgyzlsx6bm1";
   };
 
   installPhase = ''
