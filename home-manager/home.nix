@@ -63,8 +63,7 @@ in
       fastfetch
       ffmpeg-headless
       htop
-      # ncdu
-      nnn
+      ncdu
       p7zip
       pinentry_mac
       qmk
@@ -77,15 +76,15 @@ in
       yt-dlp
       zip
       # devtools
-      # aider-chat
+      age
       agenix
-      emacs-lsp-booster
       fd
       fzf
       git-trim
       jq
-      postgresql_15
+      postgresql
       ripgrep
+      sops
       sqlfluff
       tio
       # c / c++
@@ -108,8 +107,10 @@ in
       # java
       jdk
       # js
+      biome
       bun
       deno
+      pnpm
       svelte-language-server
       typescript-language-server
       typescript
@@ -135,7 +136,7 @@ in
       nodejs
       yarn
       # pascal
-      # fpc
+      fpc
       # python
       black
       pythonWithMyPackages
@@ -148,7 +149,7 @@ in
         "rustc"
         "rustfmt"
       ])
-      rust-analyzer-nightly
+      # rust-analyzer-nightly
       # yaml
       yaml-language-server
     ];

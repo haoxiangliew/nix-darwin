@@ -109,7 +109,6 @@
       FZF_DEFAULT_COMMAND = "fd --type file --color=always --strip-cwd-prefix --hidden --exclude .git";
       FZF_DEFAULT_OPTS = "--ansi";
       # TERMINFO_DIRS = lib.mkForce "${pkgs.kitty.terminfo.outPath}/share/terminfo";
-      OLLAMA_FLASH_ATTENTION = "1";
     };
     # The world runs on GNU
     systemPackages = with pkgs; [

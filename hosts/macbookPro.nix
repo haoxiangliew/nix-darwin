@@ -12,7 +12,7 @@
 
     taps = [
       "chipsalliance/verible"
-      "d12frosted/emacs-plus"
+      # "d12frosted/emacs-plus"
       "homebrew/services"
       "mongodb/brew"
       "nikitabobko/tap"
@@ -23,7 +23,6 @@
     # `brew install`
     brews = [
       "aspell"
-      "croc"
       "fileicon"
       "gstreamer"
       # {
@@ -40,13 +39,13 @@
       #     "with-unlimited-select"
       #   ];
       # }
-      {
-        name = "emacs-plus@31";
-        args = [
-          "with-native-comp"
-          "with-elrumo2-icon"
-        ];
-      }
+      # {
+      #   name = "emacs-plus@31";
+      #   args = [
+      #     "with-native-comp"
+      #     "with-elrumo2-icon"
+      #   ];
+      # }
       "libtool"
       "llvm"
       "libomp"
@@ -62,18 +61,15 @@
       let
         packages = [
           "aerospace"
-          "arduino-ide"
           "betterdisplay"
           "brave-browser"
+          "bruno"
           "chatgpt"
-          "code-composer-studio"
           "cursor"
           "darktable"
           "discord"
-          "epic-games"
           "ghostty"
           "iina"
-          "insomnia"
           "keepingyouawake"
           "keka"
           "kekaexternalhelper"
@@ -84,14 +80,10 @@
           "mac-mouse-fix"
           "microsoft-office"
           "microsoft-teams"
-          "microsoft-teams@classic"
           "middleclick"
-          "minecraft"
           "mongodb-compass"
           "mullvadvpn"
           "obs"
-          "ollama"
-          "openemu"
           "orbstack"
           "postico"
           "signal"
@@ -101,11 +93,10 @@
           "stremio"
           "sublime-merge"
           "syncthing"
-          "tradingview"
+          "tuple"
           "utm"
           "via"
           "visual-studio-code-insiders"
-          "whisky"
           "xquartz"
           "zed-preview"
           "zoom"
