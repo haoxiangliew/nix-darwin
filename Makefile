@@ -1,13 +1,10 @@
 UNAME_S := $(shell uname -s)
 
-.PHONY: default setup setuplsp setupsh update format rm deploy deploy-debug optimize gc clean-build clean reset resetui resetgpg addemacs all
+.PHONY: default setuplsp setupsh update format rm deploy deploy-debug optimize gc clean-build clean resetui resetgpg addemacs all
 
 ifeq ($(UNAME_S),Darwin)
 
 default: all
-
-setup:
-	./setup.sh
 
 setuplsp:
 	nix eval --json --file .nixd.nix > .nixd.json
@@ -53,9 +50,6 @@ clean-build:
 	rm -f .nixd.json
 
 clean: clean-build gc
-
-reset:
-	./reset.sh
 
 resetui:
 	defaults write com.apple.dock ResetLaunchPad -bool true

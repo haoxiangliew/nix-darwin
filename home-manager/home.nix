@@ -78,6 +78,7 @@ in
       # devtools
       age
       agenix
+      awscli2
       fd
       fzf
       git-trim

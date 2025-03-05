@@ -74,7 +74,6 @@
           "keka"
           "kekaexternalhelper"
           "keyboardcleantool"
-          "kitty"
           "league-of-legends"
           "lm-studio"
           "mac-mouse-fix"
