@@ -95,9 +95,9 @@
           "tuple"
           "utm"
           "via"
-          "visual-studio-code-insiders"
+          "visual-studio-code@insiders"
           "xquartz"
-          "zed-preview"
+          "zed@preview"
           "zoom"
         ];
       in

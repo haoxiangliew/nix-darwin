@@ -66,7 +66,6 @@
           modules = [
             {
               system.stateVersion = 5;
-              ids.gids.nixbld = 30000;
             }
             nix-index-database.darwinModules.nix-index
             ./overlays.nix

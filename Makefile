@@ -6,15 +6,31 @@ ifeq ($(UNAME_S),Darwin)
 
 default: all
 
+setupgpg:
+	gpg --import ~/.gnupg/gpg-haoxiangliew.key
+
 setuplsp:
 	nix eval --json --file .nixd.nix > .nixd.json
 
 setupsh:
-	@read -p "Manually add /run/current-system/sw/bin/fish to /etc/shells, done? (y/N) " confirm; \
+	@if grep -q "/run/current-system/sw/bin/fish" /etc/shells; then \
+		echo "Fish shell is already in /etc/shells"; \
+	else \
+		echo "Fish shell is not in /etc/shells"; \
+		@read -p "Add /run/current-system/sw/bin/fish to /etc/shells? (y/N) " confirm; \
+		if [ "$$confirm" = "y" ] || [ "$$confirm" = "Y" ]; then \
+			echo "/run/current-system/sw/bin/fish" | sudo tee -a /etc/shells; \
+			echo "Added fish to /etc/shells"; \
+		else \
+			echo "Fish not added to /etc/shells"; \
+		fi; \
+	fi; \
+	@read -p "Change your shell to fish? (y/N) " confirm; \
 	if [ "$$confirm" = "y" ] || [ "$$confirm" = "Y" ]; then \
 		chsh -s /run/current-system/sw/bin/fish; \
+		echo "Shell changed to fish"; \
 	else \
-		echo "Operation cancelled"; \
+		echo "Shell not changed"; \
 	fi
 
 update:
