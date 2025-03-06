@@ -184,6 +184,11 @@ in
         path = "${config.home.homeDirectory}/.gh_token";
         mode = "400";
       };
+      expand-key = {
+        file = ../secrets/expand-key.age;
+        path = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
+        mode = "400";
+      };
     };
     identityPaths = [
       "${config.home.homeDirectory}/Documents/hxSSH/id_ed25519"

@@ -6,4 +6,5 @@ in
   "gh_token.age".publicKeys = [ id_ed25519-key ];
   "gcp-rsa.age".publicKeys = [ id_ed25519-key ];
   "gpg-haoxiangliew.age".publicKeys = [ id_ed25519-key ];
+  "expand-key.age".publicKeys = [ id_ed25519-key ];
 }
